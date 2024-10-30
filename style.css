@@ -1,0 +1,400 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+    max-height:0%;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+    background-color: black;
+    color: white;
+}
+
+header {
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 9%;
+    background-color: rgb(21, 21, 21);
+    filter: drop-shadow(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 3rem;
+    color: chartreuse;
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+}
+
+nav a {
+    font-size: 1.8rem;
+    color: white;
+    margin-left: 4rem;
+    font-weight: 500;
+    transition: 0.3s ease;
+    border-bottom: 3px solid transparent;
+}
+
+nav a:hover,
+nav a.active {
+    color: chartreuse;
+    border-bottom: 3px solid chartreuse;
+}
+
+@media(max-width:995px) {
+    nav{
+       display: none;
+    }
+    
+    .after{
+        position: relative;
+        margin: 20px auto;
+    }
+    nav.active {
+        display: block;
+    }
+
+    nav a {
+        text-align: center;
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+    }
+
+    nav a:hover,
+    nav a.active {
+        padding: 1rem;
+        border-radius: 0.5rem;
+        border-bottom: 0.5rem solid chartreuse;
+    }
+
+    section{
+        position: relative;
+        top: 250px;
+    }
+}
+
+section {
+    min-height: 100vh;
+    padding: 5rem 9% 5rem;
+}
+
+.home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8rem;
+    background-color: black;
+}
+
+.home .home-content h1 {
+    font-size: 6rem;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+span {
+    color: chartreuse;
+}
+
+.home-content h3 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.home-content p {
+    font-size: 1.8rem;
+}
+
+.home-img {
+    border-radius: 50%;
+}
+
+.home-img img {
+    position: relative;
+    width: 17vw;
+    border-radius: 50%;
+    box-shadow: 0 0 25px solid chartreuse;
+    cursor: pointer;
+    transition: 0.2s linear;
+}
+
+.home-img img:hover {
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+
+.social-icons a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 6rem;
+    height: 6rem;
+    background-color: transparent;
+    border: 0.2rem solid chartreuse;
+    font-size: 2rem;
+    border-radius: 50%;
+    margin: 3rem 1.5rem 3rem 0;
+    transition: 0.3s ease;
+    color: chartreuse;
+}
+
+.social-icons a:hover {
+    color: black;
+    transform: scale(1.3) translateY(-5px);
+    background-color: chartreuse;
+    box-shadow: 0 0 25px chartreuse;
+}
+
+
+.home-content{
+    left: 30%;
+}
+
+.typing-text {
+    font-size: 34px;
+    font-weight: 600;
+    min-width: 280px;
+}
+
+.typing-text span {
+    position: relative;
+}
+
+.typing-text span::before {
+    content: "software Developer";
+    color: chartreuse;
+    animation: words 20s infinite;
+}
+
+.typing-text span::after {
+    content: "";
+    background-color: black;
+    position: absolute;
+    width: calc(100% + 8px);
+    height: 100%;
+    border-left: 3px solid black;
+    right: -8;
+    animation: cursor 0.6s infinite;
+}
+
+@keyframes cursor {
+    to {
+        border-left: 3px solid chartreuse
+    }
+}
+
+@keyframes words {
+
+    0%,
+    30% {
+        content: "Bug hunter...!";
+    }
+    31%,
+    60% {
+        content: "Script Writer...!";
+    }
+    61%,
+    100%{
+        content: "Content writier...!";
+    }
+}
+
+@media (max-width: 1000px) {
+    .home {
+        gap: 4rem;
+    }
+}
+@media(min-width:995px){
+    .main_box{
+        display:none;
+    }
+}
+@media(max-width:995px) {
+    .logo{
+        position: relative;
+        padding: auto auto;
+    }
+    .main_box{
+        background-image: url("ms_dhoni9.jpeg");
+        height: 100vh;
+        /* height: auto;
+        width:500px; */
+        background-size: cover ;
+        background-repeat: no-repeat;
+    }
+    .btn_one i{
+        color:chartreuse;
+        font-size: 30px;
+        font-weight: 700px;
+        position: absolute;
+        line-height: 60px;
+        left: 15px;
+        cursor: pointer;
+        transition: all 0.3s linear;
+    } 
+    .sidebar_menu{
+        position: fixed;
+        left:-250px;
+        height: 100vh;
+        width: 250px;
+        background-color: rgba(255, 255, 255, 0.1);
+        box-shadow: 0 0 6px rgba(255, 255, 255, 0.5);
+        transition: all 0.4s linear;
+    }
+     .sidebar_menu .logo{
+        position: absolute;
+        width: 100%;
+        line-height:60px;
+        box-shadow: 0 2px 4px rgba(255, 255, 255, 0.5);
+        height: 50px;
+    }
+    .sidebar_menu .logo a{
+        position: absolute;
+        left:50px;
+        color:chartreuse;
+        font-size: 20px;
+        font-weight: 500;
+        text-decoration: none;
+    }
+     .sidebar_menu .btn_two i{
+        color:grey;
+        font-size: 25px;
+        position: absolute;
+        line-height: 60px;
+        left: 200px;
+        opacity: 0;
+        cursor: pointer;
+    }
+    .sidebar_menu .menu{
+        width: 100%;
+        position: absolute;
+        top:60px;
+    }
+    .sidebar_menu .menu li{
+        margin-top: 6px;
+        padding: 10px 15px;
+    }
+    .sidebar_menu .menu i,a{
+        color: chartreuse;
+        text-decoration: none;
+        font-size: 22px;
+    }
+    .sidebar_menu .menu i{
+        padding-right: 6px;
+    }
+    .sidebar_menu .social_media{
+        position: absolute;
+        left:25%;
+        bottom: 30px;
+    }
+    .sidebar_menu .social_media i{
+        color:white;
+        opacity: 0.5;
+        padding:0 5px;
+    }
+    #check{
+        display: none;
+    }
+    .sidebar_menu .menu a:hover{
+        color:whitesmoke;
+    }
+    .sidebar_menu .menu li:hover{
+        box-shadow: 0 0 4px rgba(255, 255, 255, 0.5);
+    }
+    .btn_one i:hover{
+        font-size: 35px;
+    }
+    .btn_two i:hover{
+        font-size: 30px;
+    }
+    .sidebar_menu .social_media i:hover{
+        opacity: 1;
+        transform: scale(1.5);
+    }
+    #check:checked ~ .sidebar_menu{
+        left:0;
+        background-color: black;
+        border: 3px solid chartreuse;
+    }
+    
+    #check:checked ~ .btn_one i{
+        opacity: 0;
+    }
+    #check:checked ~ .sidebar_menu .btn_two i{
+        opacity: 1;
+    }
+    .home{
+        position: absolute;
+        z-index: -1;
+        max-width: 100%;
+        display: inline;
+    }
+    .home-img img {
+        width: 30vw;
+        position: relative;
+        top: -126px;
+        display: flex;
+        justify-content: center;
+        min-height: 30vh;
+    }
+    .home-content{
+
+        max-width: 100%;
+        left: 0%;
+        margin: 0%;
+    }
+    .logo{
+        padding: 0.1% 43%;
+        position: relative;
+    }
+
+    
+}
+
+@media (max-width: 995px) {
+    /* Center the image and text in mobile view */
+    .home {
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem; /* Adjust gap as needed */
+    }
+
+    .home-img {
+        display: flex;
+        justify-content: center;
+
+    }
+
+    .home-content {
+        max-width: 90%; /* Limit width on mobile */
+    }
+
+    /* Hide the content when sidebar is active */
+    .hide-content {
+        display: none; /* Class to hide content */
+    }
+}
